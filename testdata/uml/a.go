@@ -1,14 +1,13 @@
 package a
 
 import (
+	"github.com/qquunn/go-package-plantuml/testdata/uml/sub2"
 	"sync"
-	"git.oschina.net/jscode/go-package-plantuml/testdata/uml/sub2"
 )
 
-type IA interface  {
+type IA interface {
 	Add()
 }
-
 
 type SA struct {
 	a int
@@ -17,4 +16,4 @@ type SA struct {
 	m map[string]sub2.Sub2A
 }
 
-func (this * SA) Add(){}
+func (this *SA) Add() {}

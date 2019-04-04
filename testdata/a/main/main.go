@@ -1,7 +1,7 @@
 package main
 
 import (
-	"git.oschina.net/jscode/go-package-plantuml/testdata/a"
+	"github.com/qquunn/go-package-plantuml/testdata/a"
 )
 
 func m1(a1 a.IA) {
@@ -11,4 +11,3 @@ func m1(a1 a.IA) {
 func main() {
 	m1(&a.SA{})
 }
-
