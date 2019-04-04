@@ -35,12 +35,14 @@ func main() {
 
 	if opts.CodeDir == "" {
 		panic("代码目录不能为空")
-		os.Exit(1)
 	}
 
 	if opts.GopathDir == "" {
 		panic("GOPATH目录不能为空")
-		os.Exit(1)
+	}
+
+	if opts.OutputFile == "" {
+		panic("OutputFile不能为空")
 	}
 
 	if !strings.HasPrefix(opts.CodeDir, opts.GopathDir) {
@@ -64,6 +66,6 @@ func main() {
 
 	result := codeanalysis.AnalysisCode(config)
 
-	result.OutputToFile("/tmp/uml.txt")
+	result.OutputToFile(opts.OutputFile)
 
 }
